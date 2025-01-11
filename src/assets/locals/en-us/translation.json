@@ -1,0 +1,22 @@
+{
+    "logIn": "Log In",
+    "welcomeBack": "Welcome Back!",
+    "youvegotComplexityWeCanHandleIt": "You've got complexity. We can handle it.",
+    "loginId": "Login ID",
+    "password": "Password",
+    "help": "Help",
+    "forgotLoginId": "Forgot Login ID?",
+    "passwordIsRequired": "Password is required.",
+    "pleaseEnterYourName": "Please enter your name.",
+    "name": "Name",
+    "find": "Find",
+    "userId": "User ID",
+    "userNameIsRequired": "User name is required.",
+    "removeWhiteSpaces": "Please remove white spaces from username.",
+    "loginIdIsRequired": "Login ID is required.",
+    "pleaseProvideCorrectLoginId": "Please provide correct login id.",
+    "logOff": "Log Off",
+    "period": "Period",
+    "searchResultsFor": "Search results for",
+    "nameCannotBeLongerThan255Characters":"Name cannot be longer than 255 characters."
+}

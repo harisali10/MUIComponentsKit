@@ -1,0 +1,19 @@
+{
+  "name": "Ecotime by HBS",
+  "short_name": "Ecotime",
+  "theme_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "light192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "light512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

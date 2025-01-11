@@ -1,0 +1,116 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "react-app",
+    "plugin:react/jsx-runtime",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": true,
+    "tsconfigRootDir": "./"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "root": true,
+  "ignorePatterns": [
+    "dist",
+    "vite.config.ts"
+  ],
+  "rules": {
+    "react-hooks/exhaustive-deps": 0,
+    "@typescript-eslint/consistent-type-imports": [
+      2,
+      {
+        "fixStyle": "separate-type-imports"
+      }
+    ],
+    "@typescript-eslint/no-restricted-imports": [
+      0,
+      {
+        "paths": [
+          {
+            "name": "react-redux",
+            "importNames": [
+              "useSelector",
+              "useStore",
+              "useDispatch"
+            ],
+            "message": "Please use pre-typed versions from `src/app/hooks.ts` instead."
+          }
+        ]
+      }
+    ],
+    "react/prop-types": 1,
+    "react/jsx-pascal-case": 1,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-closing-bracket-location": 1,
+    "react/jsx-closing-tag-location": 1,
+    "jsx-quotes": 1,
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ],
+    "no-undef": 0,
+    "no-console": 0,
+    "no-unused-vars": 0,
+    "prefer-destructuring": 1,
+    "import/order": 1,
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+    "default-param-last": 0,
+    "linebreak-style": 0,
+    "react/require-default-props": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "@typescript-eslint/no-empty-function": 0,
+    "import/no-duplicates": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "no-param-reassign": 0,
+    "no-shadow": 0,
+    "react/react-in-jsx-scope": 0,
+    "max-len": [
+      "error",
+      {
+        "code": 130
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "": "never",
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.{c,m,}{t,j}s",
+        "*.{t,j}sx"
+      ]
+    },
+    {
+      "files": [
+        "*{test,spec}.{t,j}s?(x)"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}

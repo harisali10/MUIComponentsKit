@@ -1,0 +1,105 @@
+@mixin inputBaseStyles($color) {
+	color: $color;
+	font-size: $textFieldValueFontSize;
+}
+
+@mixin outlinedInputStyles($color) {
+	fieldset {
+		border-width: $borderWidth;
+		border-radius: $borderRadius;
+		border-color: $color;
+	}
+
+	&:hover {
+		fieldset {
+			border-color: $activeColor;
+		}
+	}
+
+	&.Mui-disabled {
+		.MuiOutlinedInput-notchedOutline {
+			border-color: $disabledTextFieldColor;
+		}
+	}
+
+	&.Mui-error {
+		fieldset {
+			border-color: $errorColor;
+			color: $errorColor;
+		}
+	}
+
+	&.Mui-focused {
+		.MuiOutlinedInput-notchedOutline {
+			border-color: $activeColor;
+		}
+	}
+}
+
+@mixin inputLabelStyles($color) {
+	color: $color;
+	font-family: $fontInter;
+	font-size: $textFieldValueFontSize;
+
+	&.Mui-focused {
+		color: $activeColor;
+	}
+
+	&.Mui-disabled {
+		color: $disabledTextFieldColor;
+	}
+}
+
+@mixin helperTextStyles {
+	&.Mui-error {
+		font-family: $fontInter;
+		font-weight: $errorTextFontWeight;
+	}
+}
+
+@mixin inputDisabledStyles {
+	&.Mui-disabled {
+		-webkit-text-fill-color: $disabledTextFieldColor;
+	}
+}
+
+.styledTextField,
+.styledTextFieldForSubHeader {
+	:global {
+		.MuiInputBase-root {
+			@include inputBaseStyles($primaryColor);
+		}
+
+		.MuiOutlinedInput-root {
+			@include outlinedInputStyles($primaryColor);
+		}
+
+		.MuiInputLabel-root {
+			@include inputLabelStyles($primaryColor);
+		}
+
+		.MuiFormHelperText-root {
+			@include helperTextStyles;
+		}
+
+		.MuiInputBase-input {
+			@include inputDisabledStyles;
+		}
+	}
+
+	&.styledTextFieldForSubHeader {
+		:global {
+			.MuiInputBase-root {
+				@include inputBaseStyles(#fff);
+			}
+
+			.MuiOutlinedInput-root {
+				@include outlinedInputStyles(#fff);
+			}
+
+			.MuiInputLabel-root {
+				@include inputLabelStyles(#fff);
+			}
+		}
+	}
+}

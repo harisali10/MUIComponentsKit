@@ -1,0 +1,5 @@
+@import '../../components/ApplicationButton/Button.module.scss';
+
+.loginButton {
+    @extend .button;
+}

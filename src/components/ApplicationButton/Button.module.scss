@@ -1,0 +1,23 @@
+.button {
+    height: $btnHeight;
+    text-transform: capitalize;
+    font-size: $btnFontSize;
+    font-weight: $btnFontWeight;
+    border-radius: $borderRadius;
+    background-color: $primaryColor;
+    color: $paper;
+
+    &:hover {
+        background-color: $primaryColor;
+    }
+
+    &:active {
+        background-color: $activeColor;
+    }
+
+    &:global(.Mui-disabled) {
+        color: $paper;
+        background-color: $disabledColor;
+    }
+
+}
